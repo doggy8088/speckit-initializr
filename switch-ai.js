@@ -21,7 +21,9 @@ const AI_TOOLS = [
 ];
 
 async function main() {
-  console.log(chalk.cyan.bold('\n🤖 Specify AI Switcher\n'));
+  // Check if constitution exists before we start wiping things
+  const constitutionPath = '.specify/memory/constitution.md';
+  const shouldRestoreConstitution = shell.test('-f', constitutionPath);
 
   // Check if git worktree is clean
   if (shell.which('git')) {
@@ -76,9 +78,11 @@ async function main() {
   }
 
   // 3. Restore constitution
-  console.log(chalk.gray('3. Restoring constitution...'));
-  if (shell.exec('git restore .specify/memory/constitution.md').code !== 0) {
-    console.log(chalk.yellow('Warning: Could not restore constitution (maybe git is not initialized or file missing)'));
+  if (shouldRestoreConstitution) {
+    console.log(chalk.gray('3. Restoring constitution...'));
+    if (shell.exec('git restore .specify/memory/constitution.md').code !== 0) {
+      console.log(chalk.yellow('Warning: Could not restore constitution (maybe git is not initialized or file missing)'));
+    }
   }
 
   console.log(chalk.green('\n✅ Done!'));
