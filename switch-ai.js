@@ -70,7 +70,7 @@ async function main() {
   }
 
   // 2. Rebuild template
-  const cmd = `specify init --here --script ${scriptType} --ai ${selectedAI} --no-git --force`;
+  const cmd = `specify init --here --script ${scriptType} --ai ${selectedAI} --no-git --force --ignore-agent-tools`;
   console.log(chalk.gray(`2. Running: ${cmd}`));
   if (shell.exec(cmd).code !== 0) {
     console.log(chalk.red('Error executing specify init'));
