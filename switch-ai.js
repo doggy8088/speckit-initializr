@@ -40,7 +40,6 @@ async function main() {
       message: 'What would you like to do?',
       choices: [
         { name: 'Switch AI (Clean .specify & Re-init)', value: 'switch' },
-        { name: 'Install All AIs (Batch Init)', value: 'install_all' },
         { name: 'Exit', value: 'exit' }
       ]
     }
@@ -102,17 +101,6 @@ async function main() {
 
     console.log(chalk.green('\n✅ Done!'));
 
-  } else if (action === 'install_all') {
-    console.log(chalk.yellow(`\n📦 Installing ALL AI tools with ${scriptType} script...\n`));
-
-    for (const ai of AI_TOOLS) {
-      const cmd = `specify init --here --no-git --force --script ${scriptType} --ignore-agent-tools --ai ${ai}`;
-      console.log(chalk.blue(`> Installing ${ai}...`));
-      if (shell.exec(cmd).code !== 0) {
-        console.log(chalk.red(`Failed to install ${ai}`));
-      }
-    }
-    console.log(chalk.green('\n✅ All tools installed!'));
   }
 }
 
