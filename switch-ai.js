@@ -21,6 +21,8 @@ const AI_TOOLS = [
 ];
 
 async function main() {
+  console.log(chalk.cyan.bold('\n🤖 Specify AI Switcher\n'));
+
   // Check if git worktree is clean
   if (shell.which('git')) {
     const gitStatus = shell.exec('git status --porcelain', { silent: true });
