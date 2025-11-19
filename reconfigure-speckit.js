@@ -21,6 +21,16 @@ const AI_TOOLS = [
 ];
 
 async function main() {
+  if (process.argv.includes('--help') || process.argv.includes('-h')) {
+    console.log(chalk.cyan('\nSpeckit Initializr\n'));
+    console.log('Usage: speckit-initialzr [options]');
+    console.log('\nOptions:');
+    console.log('  -h, --help    Show this help message');
+    console.log('\nDescription:');
+    console.log('  Quickly reconfigure Speckit environment with different AI assistants.');
+    process.exit(0);
+  }
+
   // Check if constitution exists before we start wiping things
   const constitutionPath = '.specify/memory/constitution.md';
   const shouldRestoreConstitution = shell.test('-f', constitutionPath);
