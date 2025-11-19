@@ -40,6 +40,14 @@ npx @willh/speckit-initialzr
 npx -y @willh/speckit-initialzr --help
 ```
 
+查看版本資訊：
+
+```bash
+npx -y @willh/speckit-initialzr --version
+# 或
+npx -y @willh/speckit-initialzr -v
+```
+
 ### 操作流程
 
 1.  **選擇腳本類型**：根據您的操作系統選擇 PowerShell 或 Bash。
