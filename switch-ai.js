@@ -81,7 +81,7 @@ async function main() {
   if (shouldRestoreConstitution) {
     console.log(chalk.gray('3. Restoring constitution...'));
     if (shell.exec('git restore .specify/memory/constitution.md').code !== 0) {
-      console.log(chalk.yellow('Warning: Could not restore constitution (maybe git is not initialized or file missing)'));
+      // console.log(chalk.yellow('Warning: Could not restore constitution (maybe git is not initialized or file missing)'));
     }
   }
 
