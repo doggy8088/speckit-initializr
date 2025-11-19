@@ -1,5 +1,5 @@
 {
-  "name": "speckit-initializr",
+  "name": "@willh/speckit-initialzr",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,8 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Will 保哥",
+  "license": "MIT",
   "dependencies": {
     "chalk": "^4.1.2",
     "inquirer": "^8.2.7",
