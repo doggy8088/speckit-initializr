@@ -14,7 +14,7 @@
 
 ## 安裝
 
-使用 npm 全局安裝：
+使用 npm 全域安裝：
 
 ```bash
 npm install -g @willh/speckit-initialzr
@@ -28,7 +28,7 @@ npm install -g @willh/speckit-initialzr
 speckit-initialzr
 ```
 
-或者如果您沒有全局安裝，也可以使用 npx 運行：
+或者如果您沒有全域安裝，也可以使用 npx 運行：
 
 ```bash
 npx @willh/speckit-initialzr

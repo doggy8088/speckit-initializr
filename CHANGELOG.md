@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.7] - 2025-11-19
+
+### Changed
+- Updated README terminology from "全局安裝" to "全域安裝".
+
 ## [1.0.6] - 2025-11-19
 
 ### Changed
