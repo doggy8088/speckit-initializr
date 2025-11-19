@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.9] - 2025-11-19
+
+### Added
+- Added `.github/copilot-instructions.md` for project guidelines.
+
 ## [1.0.8] - 2025-11-19
 
 ### Changed
