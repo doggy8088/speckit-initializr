@@ -1,16 +1,32 @@
 {
   "name": "@willh/speckit-initialzr",
   "version": "1.0.3",
-  "description": "",
+  "description": "A CLI tool to quickly reconfigure Speckit environment with different AI assistants.",
   "main": "reconfigure-speckit.js",
   "bin": {
     "speckit-initialzr": "./reconfigure-speckit.js"
+  },
+  "files": [
+    "reconfigure-speckit.js",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
   },
   "scripts": {
     "start": "node reconfigure-speckit.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "speckit",
+    "cli",
+    "configuration",
+    "ai",
+    "assistant",
+    "initializr"
+  ],
   "author": "Will 保哥",
   "license": "MIT",
   "repository": {

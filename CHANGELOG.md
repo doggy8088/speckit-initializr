@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.4] - 2025-11-19
+
+### Changed
+- Improved package.json metadata (description, keywords, engines, files).
+
 ## [1.0.3] - 2025-11-19
 
 ### Added
