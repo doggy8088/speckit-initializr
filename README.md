@@ -34,7 +34,7 @@ speckit-initialzr
 npx @willh/speckit-initialzr
 ```
 
-查看幫助信息：
+查看幫助訊息：
 
 ```bash
 npx -y @willh/speckit-initialzr --help

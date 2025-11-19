@@ -41,7 +41,7 @@ async function main() {
   // Check if specify CLI is installed
   if (!shell.which('specify')) {
     console.log(chalk.red('\n❌ Error: specify CLI not found.'));
-    console.log(chalk.yellow('Please install it first (e.g., npm install -g specify-cli)\n'));
+    console.log(chalk.yellow('Please install it first: https://github.com/github/spec-kit/\n'));
     process.exit(1);
   }
 

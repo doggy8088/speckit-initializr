@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.6] - 2025-11-19
+
+### Changed
+- Updated `specify` CLI check message with installation link.
+- Fixed typo in README (Traditional Chinese).
+
 ## [1.0.5] - 2025-11-19
 
 ### Added
