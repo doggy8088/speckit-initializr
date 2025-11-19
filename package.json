@@ -2,7 +2,10 @@
   "name": "@willh/speckit-initialzr",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "reconfigure-speckit.js",
+  "bin": {
+    "speckit-initialzr": "./reconfigure-speckit.js"
+  },
   "scripts": {
     "start": "node reconfigure-speckit.js",
     "test": "echo \"Error: no test specified\" && exit 1"
