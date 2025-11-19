@@ -38,6 +38,13 @@ async function main() {
     process.exit(0);
   }
 
+  // Check if specify CLI is installed
+  if (!shell.which('specify')) {
+    console.log(chalk.red('\n❌ Error: specify CLI not found.'));
+    console.log(chalk.yellow('Please install it first (e.g., npm install -g specify-cli)\n'));
+    process.exit(1);
+  }
+
   // Check if constitution exists before we start wiping things
   const constitutionPath = '.specify/memory/constitution.md';
   const shouldRestoreConstitution = shell.test('-f', constitutionPath);
