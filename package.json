@@ -1,6 +1,6 @@
 {
   "name": "@willh/speckit-initialzr",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "reconfigure-speckit.js",
   "bin": {
