@@ -38,10 +38,17 @@ async function main() {
     process.exit(0);
   }
 
-  // Check if specify CLI is installed
-  if (!shell.which('specify')) {
-    console.log(chalk.red('\n❌ Error: specify CLI not found.'));
-    console.log(chalk.yellow('Please install it first: https://github.com/github/spec-kit/\n'));
+  // Check available CLI (prefer uvx)
+  const hasUvx = shell.which('uvx');
+  const hasSpecify = shell.which('specify');
+
+  if (!hasUvx && !hasSpecify) {
+    console.log(chalk.red('\n❌ Error: Neither uvx nor specify CLI found.'));
+    console.log(
+      chalk.yellow(
+        'Please install uvx (preferred) or specify CLI first: https://github.com/github/spec-kit/\n'
+      )
+    );
     process.exit(1);
   }
 
@@ -94,7 +101,10 @@ async function main() {
   }
 
   // 2. Rebuild template
-  const cmd = `specify init --here --script ${scriptType} --ai ${selectedAI} --no-git --force --ignore-agent-tools`;
+  const specifyBaseCommand = hasUvx
+    ? 'uvx --from git+https://github.com/github/spec-kit.git specify init'
+    : 'specify init';
+  const cmd = `${specifyBaseCommand} --here --script ${scriptType} --ai ${selectedAI} --no-git --force --ignore-agent-tools`;
   console.log(chalk.gray(`2. Running: ${cmd}`));
   if (shell.exec(cmd).code !== 0) {
     console.log(chalk.red('Error executing specify init'));
