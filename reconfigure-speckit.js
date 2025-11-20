@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const inquirer = require('inquirer');
 const shell = require('shelljs');
 const chalk = require('chalk');
