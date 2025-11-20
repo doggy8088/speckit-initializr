@@ -1,10 +1,10 @@
 {
   "name": "@willh/speckit-initialzr",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A CLI tool to quickly reconfigure Speckit environment with different AI assistants.",
   "main": "reconfigure-speckit.js",
   "bin": {
-    "speckit-initialzr": "./reconfigure-speckit.js"
+    "speckit-initialzr": "reconfigure-speckit.js"
   },
   "files": [
     "reconfigure-speckit.js",
@@ -17,7 +17,8 @@
   },
   "scripts": {
     "start": "node reconfigure-speckit.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish:public": "npm publish --access public"
   },
   "keywords": [
     "speckit",
