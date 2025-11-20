@@ -8,6 +8,11 @@ All notable changes to this project will be documented in this file.
 - Prefer `uvx --from git+https://github.com/github/spec-kit.git specify init` when available, with fallback to `specify`.
 - Updated README to document the uvx-first initialization flow.
 
+## [1.0.10] - 2025-11-20
+
+### Changed
+- Improved error message when `specify` CLI is not installed, including installation instructions and link.
+
 ## [1.0.9] - 2025-11-19
 
 ### Added
