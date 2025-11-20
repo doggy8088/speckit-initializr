@@ -16,4 +16,6 @@ node_modules
 .shai
 .windsurf
 
-.swp
+dist/
+*.swp
+*.tgz
