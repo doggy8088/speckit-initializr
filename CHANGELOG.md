@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.10] - 2025-11-20
+
+### Changed
+- Improved error message when `specify` CLI is not installed, including installation instructions and link.
+
 ## [1.0.9] - 2025-11-19
 
 ### Added
