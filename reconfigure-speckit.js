@@ -41,7 +41,7 @@ async function main() {
   // Check if specify CLI is installed
   if (!shell.which('specify')) {
     console.error(chalk.red('\n❌ Error: The "specify" CLI is not installed or not found in your PATH.'));
-    console.log(chalk.yellow('Please install the Specify CLI before running this tool: https://github.com/github/spec-kit/#installation\n'));
+    console.log(chalk.yellow('Please install the Specify CLI before running this tool: https://github.com/github/spec-kit/\n'));
     process.exit(1);
   }
 
