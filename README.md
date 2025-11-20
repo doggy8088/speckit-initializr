@@ -9,7 +9,7 @@
 *   **廣泛的 AI 支援**：支援多種 AI 助手配置，包括 Claude, Gemini, Copilot, Cursor Agent, Qwen 等。
 *   **智能重置**：
     *   自動移除舊的 `.specify` 配置。
-    *   使用 `specify init` 重新初始化。
+    *   優先使用 `uvx --from git+https://github.com/github/spec-kit.git specify init`（若未安裝則使用 `specify init`）重新初始化。
     *   自動恢復 `.specify/memory/constitution.md` 文件（如果存在）。
 
 ## 安裝
@@ -57,7 +57,7 @@ npx -y @willh/speckit-initialzr -v
 ## 注意事項
 
 *   運行前請確保您的 Git 工作區是乾淨的（沒有未提交的更改）。
-*   此工具依賴於 `specify` CLI，請確保環境中已安裝相關依賴。
+*   此工具優先使用 `uvx` 執行 Spec Kit，如未安裝會退回至 `specify` CLI，請確保環境中至少存在其一。
 
 ## 授權
 

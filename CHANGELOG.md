@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.0] - 2025-11-20
+
+### Changed
+- Prefer `uvx --from git+https://github.com/github/spec-kit.git specify init` when available, with fallback to `specify`.
+- Updated README to document the uvx-first initialization flow.
+
 ## [1.0.10] - 2025-11-20
 
 ### Changed
