@@ -1,6 +1,6 @@
 {
   "name": "@willh/speckit-initializr",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A CLI tool to quickly reconfigure Speckit environment with different AI assistants.",
   "main": "dist/speckit-initializr.js",
   "bin": {
