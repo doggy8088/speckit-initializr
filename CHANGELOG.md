@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.1] - 2025-11-21
+
+### Fixed
+
+- Replaced `shell.exec` with `child_process.execSync` to fix compatibility issues with Bun bundling (resolves `Error: Cannot find module .../exec-child.js`).
+
 ## [0.1.0] - 2025-11-21
 
 ### Added

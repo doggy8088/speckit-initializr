@@ -3,6 +3,7 @@ const inquirer = require('inquirer');
 const shell = require('shelljs');
 const chalk = require('chalk');
 const packageJson = require('./package.json');
+const { execSync } = require('child_process');
 
 const AI_TOOLS = [
   'claude',
@@ -58,11 +59,15 @@ async function main() {
 
   // Check if git worktree is clean
   if (shell.which('git')) {
-    const gitStatus = shell.exec('git status --porcelain', { silent: true });
-    if (gitStatus.code === 0 && gitStatus.stdout.trim() !== '') {
-      console.log(chalk.red('\n❌ Error: Git worktree is not clean.'));
-      console.log(chalk.yellow('Please commit or stash your changes before running this tool.\n'));
-      process.exit(1);
+    try {
+      const stdout = execSync('git status --porcelain', { encoding: 'utf8', stdio: ['pipe', 'pipe', 'ignore'] });
+      if (stdout.trim() !== '') {
+        console.log(chalk.red('\n❌ Error: Git worktree is not clean.'));
+        console.log(chalk.yellow('Please commit or stash your changes before running this tool.\n'));
+        process.exit(1);
+      }
+    } catch (e) {
+      // git status failed, ignore or handle
     }
   }
 
@@ -106,7 +111,9 @@ async function main() {
     : 'specify init';
   const cmd = `${specifyBaseCommand} --here --script ${scriptType} --ai ${selectedAI} --no-git --force --ignore-agent-tools`;
   console.log(chalk.gray(`2. Running: ${cmd}`));
-  if (shell.exec(cmd).code !== 0) {
+  try {
+    execSync(cmd, { stdio: 'inherit' });
+  } catch (error) {
     console.log(chalk.red('Error executing specify init'));
     process.exit(1);
   }
@@ -114,7 +121,9 @@ async function main() {
   // 3. Restore constitution
   if (shouldRestoreConstitution) {
     console.log(chalk.gray('3. Restoring constitution...'));
-    if (shell.exec('git restore .specify/memory/constitution.md', { silent: true }).code !== 0) {
+    try {
+      execSync('git restore .specify/memory/constitution.md', { stdio: 'ignore' });
+    } catch (e) {
       // console.log(chalk.yellow('Warning: Could not restore constitution (maybe git is not initialized or file missing)'));
     }
   }
