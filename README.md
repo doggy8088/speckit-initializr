@@ -40,6 +40,12 @@ npx @willh/speckit-initializr
 npx -y @willh/speckit-initializr --help
 ```
 
+強制執行（跳過 Git 檢查）：
+
+```bash
+npx -y @willh/speckit-initializr --force
+```
+
 查看版本資訊：
 
 ```bash

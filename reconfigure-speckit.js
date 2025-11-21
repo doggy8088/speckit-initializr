@@ -34,6 +34,7 @@ async function main() {
     console.log('\nOptions:');
     console.log('  -v, --version Show version number');
     console.log('  -h, --help    Show this help message');
+    console.log('  --force       Skip git worktree clean check');
     console.log('\nDescription:');
     console.log('  Quickly reconfigure Speckit environment with different AI assistants.');
     process.exit(0);
@@ -58,7 +59,7 @@ async function main() {
   const shouldRestoreConstitution = shell.test('-f', constitutionPath);
 
   // Check if git worktree is clean
-  if (shell.which('git')) {
+  if (shell.which('git') && !process.argv.includes('--force')) {
     try {
       const stdout = execSync('git status --porcelain', { encoding: 'utf8', stdio: ['pipe', 'pipe', 'ignore'] });
       if (stdout.trim() !== '') {
