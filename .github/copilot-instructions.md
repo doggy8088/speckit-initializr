@@ -1,7 +1,7 @@
 # GitHub Copilot Instructions for Speckit Initializr
 
 ## Project Overview
-This is a Node.js CLI tool (`@willh/speckit-initialzr`) used to quickly reconfigure the Speckit environment by switching between different AI assistants.
+This is a Node.js CLI tool (`@willh/speckit-initializr`) used to quickly reconfigure the Speckit environment by switching between different AI assistants.
 
 ## Development Guidelines
 

@@ -17,7 +17,7 @@
 使用 npm 全域安裝：
 
 ```bash
-npm install -g @willh/speckit-initialzr
+npm install -g @willh/speckit-initializr
 ```
 
 ## 使用方法
@@ -25,27 +25,27 @@ npm install -g @willh/speckit-initialzr
 在您的專案根目錄下運行：
 
 ```bash
-speckit-initialzr
+speckit-initializr
 ```
 
 或者如果您沒有全域安裝，也可以使用 npx 運行：
 
 ```bash
-npx @willh/speckit-initialzr
+npx @willh/speckit-initializr
 ```
 
 查看幫助訊息：
 
 ```bash
-npx -y @willh/speckit-initialzr --help
+npx -y @willh/speckit-initializr --help
 ```
 
 查看版本資訊：
 
 ```bash
-npx -y @willh/speckit-initialzr --version
+npx -y @willh/speckit-initializr --version
 # 或
-npx -y @willh/speckit-initialzr -v
+npx -y @willh/speckit-initializr -v
 ```
 
 ### 操作流程

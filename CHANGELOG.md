@@ -2,67 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.1.0] - 2025-11-20
-
-### Changed
-- Prefer `uvx --from git+https://github.com/github/spec-kit.git specify init` when available, with fallback to `specify`.
-- Updated README to document the uvx-first initialization flow.
-
-## [1.0.10] - 2025-11-20
-
-### Changed
-- Improved error message when `specify` CLI is not installed, including installation instructions and link.
-
-## [1.0.9] - 2025-11-19
+## [0.1.0] - 2025-11-21
 
 ### Added
-- Added `.github/copilot-instructions.md` for project guidelines.
 
-## [1.0.8] - 2025-11-19
-
-### Changed
-- Added documentation for `--version` and `-v` flags in README.
-
-## [1.0.7] - 2025-11-19
-
-### Changed
-- Updated README terminology from "全局安裝" to "全域安裝".
-
-## [1.0.6] - 2025-11-19
-
-### Changed
-- Updated `specify` CLI check message with installation link.
-- Fixed typo in README (Traditional Chinese).
-
-## [1.0.5] - 2025-11-19
-
-### Added
-- Added check for `specify` CLI availability before running.
-
-## [1.0.4] - 2025-11-19
-
-### Changed
-- Improved package.json metadata (description, keywords, engines, files).
-
-## [1.0.3] - 2025-11-19
-
-### Added
-- Added `-v` and `--version` flags to show version number.
-
-## [1.0.2] - 2025-11-19
-
-### Added
-- Added `--help` flag support.
-- Updated README with `npx -y` usage example.
-
-## [1.0.1] - 2025-11-19
-
-### Added
-- Added detailed README.md in Traditional Chinese.
-- Added CHANGELOG.md.
-
-## [1.0.0] - 2025-11-19
-
-### Added
-- Initial release of speckit-initialzr.
+- Initial release of speckit-initializr.
 - CLI tool to reconfigure speckit environment.
+- Prefer `uvx --from git+https://github.com/github/spec-kit.git specify init` when available, with fallback to `specify`.
+- Added detailed README.md in Traditional Chinese.
+- Added `--help`, `-v`, and `--version` flags support.
+- Added check for `specify` CLI availability before running.

@@ -1,13 +1,13 @@
 {
-  "name": "@willh/speckit-initialzr",
-  "version": "1.1.3",
+  "name": "@willh/speckit-initializr",
+  "version": "0.1.0",
   "description": "A CLI tool to quickly reconfigure Speckit environment with different AI assistants.",
-  "main": "dist/speckit-initialzr.js",
+  "main": "dist/speckit-initializr.js",
   "bin": {
-    "speckit-initialzr": "dist/speckit-initialzr.js"
+    "speckit-initializr": "dist/speckit-initializr.js"
   },
   "files": [
-    "dist/speckit-initialzr.js",
+    "dist/speckit-initializr.js",
     "reconfigure-speckit.js",
     "README.md",
     "LICENSE",
@@ -18,7 +18,7 @@
   },
   "scripts": {
     "start": "node reconfigure-speckit.js",
-    "build": "bun build reconfigure-speckit.js --target node --minify --outfile dist/speckit-initialzr.js",
+    "build": "bun build reconfigure-speckit.js --target node --minify --outfile dist/speckit-initializr.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublishOnly": "npm run build",
     "publish:public": "npm publish --access public"
@@ -40,10 +40,13 @@
   "bugs": {
     "url": "https://github.com/doggy8088/speckit-initializr/issues"
   },
-  "homepage": "https://github.com/doggy8088/speckit-initializr#readme",
+  "homepage": "https://github.com/doggy8088/speckit-initializr",
   "dependencies": {
     "chalk": "^4.1.2",
     "inquirer": "^8.2.7",
     "shelljs": "^0.10.0"
+  },
+  "devDependencies": {
+    "bun": "^1.3.2"
   }
 }
